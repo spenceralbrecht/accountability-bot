@@ -10,10 +10,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 load_dotenv()
 
 # Set up your Twilio API credentials
-account_sid = os.environ['TWILIO_ACCOUNT_SID']
-auth_token = os.environ['TWILIO_AUTH_TOKEN']
-twilio_phone_number = os.environ['TWILIO_PHONE_NUMBER']
-my_phone_number = os.environ['MY_PHONE_NUMBER']
+account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
+auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
+twilio_phone_number = os.environ.get('TWILIO_PHONE_NUMBER')
+my_phone_number = os.environ.get('MY_PHONE_NUMBER')
 
 # Initialize the Twilio client
 client = Client(account_sid, auth_token)
